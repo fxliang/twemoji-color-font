@@ -18,14 +18,14 @@ jobs:
     #  run: ./configure
       
     - name: Install dependencies
-      run: sudo apt-get update
-           sudo apt-get install inkscape potrace npm nodejs fontforge devscripts python3-fontforge python3-pip python3-yaml imagemagick git make debhelper build-essential
-           sudo npm install -g svgo
-           sudo pip3 install fonttools
-           #git clone https://github.com/eosrei/twemoji-color-font.git
+      run: sudo apt-get update &&
+           sudo apt-get install inkscape potrace npm nodejs fontforge devscripts python3-fontforge python3-pip python3-yaml imagemagick git make debhelper build-essential &&
+           sudo npm install -g svgo &&
+           sudo pip3 install fonttools &&
+           #git clone https://github.com/eosrei/twemoji-color-font.git &&
       
     - name: Run make
-      run: cd twemoji-color-font
-           git clone https://github.com/13rac1/scfbuild.git SCFBuild
-           make -j 4
+      run: cd twemoji-color-font &&
+           git clone https://github.com/13rac1/scfbuild.git SCFBuild &&
+           make -j 4 
            
