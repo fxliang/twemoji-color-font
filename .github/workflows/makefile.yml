@@ -25,7 +25,8 @@ jobs:
            #git clone https://github.com/eosrei/twemoji-color-font.git &&
       
     - name: Run make
-      run: cd twemoji-color-font &&
+      run: 
+           #cd twemoji-color-font &&
            git clone https://github.com/13rac1/scfbuild.git SCFBuild &&
            make -j 4 
            
