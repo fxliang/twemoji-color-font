@@ -28,5 +28,10 @@ jobs:
       run: 
            #cd twemoji-color-font &&
            git clone https://github.com/13rac1/scfbuild.git SCFBuild &&
-           make -j 4 
+           make -j 4 windows-package
            
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        path: |
+          build/TwitterColorEmoji-SVGinOT*.zip
