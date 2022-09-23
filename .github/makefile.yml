@@ -1,0 +1,33 @@
+name: Makefile CI
+on:
+  push:
+    branches:
+      - "*"
+  pull_request:
+    branches:
+      - "*"
+
+  jobs:
+    build:
+
+      runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: sudo apt-get update &&
+          sudo apt-get install inkscape potrace npm nodejs fontforge devscripts python3-fontforge python3-pip python3-yaml imagemagick git make debhelper build-essential &&
+          sudo npm install -g svgo &&
+          sudo pip3 install fonttools 
+
+      - name: Run make
+        run: 
+          git clone https://github.com/13rac1/scfbuild.git SCFBuild &&
+          make -j 4 windows-package
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          path: |
+            build/TwitterColorEmoji-SVGinOT*.zip
