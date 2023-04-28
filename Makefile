@@ -9,7 +9,7 @@ TMP := /dev/shm
 SCFBUILD := SCFBuild/bin/scfbuild
 
 VERSION := 15.0
-FONT_PREFIX := TwitterColorEmoji-SVGinOT
+FONT_PREFIX := NotoColorEmoji-SVGinOT
 REGULAR_FONT := build/$(FONT_PREFIX).ttf
 REGULAR_PACKAGE := build/$(FONT_PREFIX)-$(VERSION)
 MACOS_FONT := build/$(FONT_PREFIX)-MacOS.ttf

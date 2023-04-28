@@ -1,5 +1,5 @@
-# SCFBuild configuration file for Twitter Color Emoji
-output_file: build/TwitterEmojiColor-SVGinOT.ttf
+# SCFBuild configuration file for Noto Color Emoji SVG
+output_file: build/NotoEmojiColor-SVGinOT.ttf
 verbose: False
 glyph_svg_dir: build/svg-bw
 color_svg_dir: build/svg-color
@@ -15,23 +15,25 @@ color_transform: translate(0 -6.75)
 width_space: 561
 table_name:
   copyright: >
-    Copyright 2021 Brad Erickson CC-BY-4.0
-    Copyright 2021 Twitter, Inc. CC-BY-4.0
-  family: Twitter Color Emoji
+    Emoji fonts (under the fonts subdirectory) are under the SIL Open Font License, version 1.1.
+    Tools and most image resources are under the Apache license, version 2.0. Flag images under third_party/region-flags are in the public domain or otherwise exempt from copyright (more info).
+  family: Noto Color Emoji
   # Subfamily is also called Style or Weight. Often set to: Regular
   subfamily: Regular
-  unique_id: Twitter Color Emoji SVGinOT eosrei.net
-  full_name: Twitter Color Emoji SVGinOT
+  unique_id: 2.101;GOOG;NotoColorEmoji-SVG
+  full_name: Noto Color Emoji SVGinOT
   #version:
   # No spaces in PostScript Names
-  postscript_name: TwitterColorEmojiSVGinOT
+  postscript_name: NotoColorEmoji-SVG
   #trademark:
-  manufacturer: 13rac1
-  designer: Twitter, Inc.
+  manufacturer: fxliang
+  designer: Google Inc.
   description: >
-    A SVGinOT color emoji font using the Twitter Emoji for Everyone set:
-    https://github.com/eosrei/twemoji-color-font
-  url_vendor: https://github.com/eosrei/twemoji-color-font
-  url_designer: https://github.com/twitter/twemoji
-  license: Creative Commons Attribution 4.0 International
-  url_license: http://creativecommons.org/licenses/by/4.0/
+    Noto Emoji (Stands for No Tofu) is an open source (Open Font License 1.1) emoji library that provides standard Unicode emoji support and tools for working with them including:
+    A Unicode compliant color emoji font.
+    A full library of Noto color emoji font files including 3,633 vector svgs and pngs
+    Metadata for Emoji Input (including shortcodes, emoji ordering, ascii equivalents)
+  url_vendor: https://github.com/fxliang/twemoji-color-font/tree/noto
+  url_designer: https://github.com/googlefonts/noto-emoji
+  license: SIL Open Font License, version 1.1.
+  url_license: https://github.com/googlefonts/noto-emoji/blob/main/fonts/LICENSE
